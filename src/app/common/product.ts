@@ -1,11 +1,11 @@
 export class Product {
     public sku: string;
     public name: string;
-    public desc: string;
-    public price: number;
-    public image: string;
+    public description: string;
+    public unitPrice: number;
+    public imageUrl: string;
     public active: boolean;
-    public stock: number;
-    public created: Date;
-    public updated: Date;
+    public unitsInStock: number;
+    public dateCreated: Date;
+    public lastUpdate: Date;
 }
