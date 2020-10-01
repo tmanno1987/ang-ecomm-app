@@ -23,47 +23,46 @@
     </tbody>
 </table> -->
 <!-------------------------- START -- Product List of Data -- START ---------------------->
-<div class="main-content">
-    <div class="section-content section-content-p30">
-        <div class="container-fluid">
-            <div class="row">
+<div class="section-content section-content-p30">
+    <div class="container-fluid">
+        <div class="row">
 
-                <div class="col-md-3" *ngFor="let prod of products">
-                    <div class="product-box">
-                        <a href="product-detail.html">
-                            <img src="assets/images/ecomm-app-logo.png" class="img-responsive">
-                        </a>
-                        <a href="product-detail.html">
-                            <h1>{{ prod.name }}</h1>
-                        </a>
-                        <h2>{{ prod.description }}</h2>
-                        <div class="price">{{ prod.unitPrice | currency:'USD' }}</div>
-                        <a href="#" class="primary-btn">Add to cart</a>
-                    </div>
+            <div class="col-md-3" *ngFor="let prod of products">
+                <div class="product-box">
+                    <a href="product-detail.html">
+                        <img src={{prod.imageUrl}} class="img-responsive">
+                    </a>
+                    <a href="product-detail.html">
+                        <h1>{{ prod.name }}</h1>
+                    </a>
+                    <h2>{{ prod.description }}</h2>
+                    <div class="price">{{ prod.unitPrice | currency:'USD' }}</div>
+                    <a href="#" class="primary-btn">Add to cart</a>
                 </div>
             </div>
+        </div>
 
-            <div class="footer-pagination">
-                <div class="row">
-                    <div class="col-md-6"></div>
-                    <div class="col-md-3">
-                        <div class="items">
-                            <label>Products per page</label> <select>
-                                <option>10</option>
-                                <option>20</option>
-                                <option>30</option>
-                                <option>40</option>
-                            </select>
-                        </div>
+        <div class="footer-pagination">
+            <div class="row">
+                <div class="col-md-6"></div>
+                <div class="col-md-3">
+                    <div class="items">
+                        <label>Products per page</label> <select>
+                            <option>20</option>
+                            <option>40</option>
+                            <option>60</option>
+                            <option>80</option>
+                            <option>100</option>
+                        </select>
                     </div>
-                    <div class="col-md-2">
-                        <div class="number">1 - 10 of 100</div>
-                    </div>
-                    <div class="col-md-1">
-                        <div class="arrows">
-                            <a href="#"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
-                            <a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
-                        </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="number">1 - 20 of {{products.length}}</div>
+                </div>
+                <div class="col-md-1">
+                    <div class="arrows">
+                        <a href="#"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i></a>
                     </div>
                 </div>
             </div>
